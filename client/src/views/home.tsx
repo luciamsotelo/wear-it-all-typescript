@@ -1,19 +1,18 @@
-// folder views - file home
+// folder views - file home.tsx
+
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "../components/header";
 import Carousel from "../components/carousel";
-import Footer from "../components/footer"
 
 
-function Home() {
+function Home(): JSX.Element {
     return (
         <div>
-            <Header/>
-            <Carousel/>
-            <Footer/>
+            <Header />
+            <Carousel />
+            
         </div>
-        
     );
 }
 

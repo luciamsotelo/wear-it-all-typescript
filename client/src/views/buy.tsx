@@ -1,19 +1,18 @@
-// folder views - file buy
+// folder views - file buy.tsx
 
 import React from 'react';
 import Header from '../components/header';
-import SearchInput from '../components/SearchInput.js';
-import Footer from "../components/footer"
+import SearchInput from '../components/SearchInput';
 
-function Buy() {
+
+function Buy(): JSX.Element {
     return (
         <div>
             <Header />
             <SearchInput />
-            <Footer/>
-            
         </div>
     );
 }
 
 export default Buy;
+
