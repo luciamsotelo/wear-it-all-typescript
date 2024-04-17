@@ -1,0 +1,70 @@
+@media (min-width: 360px) and (min-height: 720px) {
+    h6 {
+        background: rgba(0, 0, 0, 0.4);
+        text-shadow: 1px 1px 3px black;
+        border-radius: 5px;
+    }
+
+    .hidden {
+        display: none;
+    }
+}
+
+@media (min-width: 1366px) and (min-height: 768px) {
+    h1 {
+        font-size: 100px !important;
+        justify-content: center;
+        padding: "150px 10px 10px 395px";
+    }
+
+    h4 {
+        font-size: 38px !important;
+    }
+
+    h6 {
+        background: rgba(0, 0, 0, 0.4);
+        text-shadow: 1px 1px 3px black;
+        border-radius: 5px;
+        font-size: 35px !important;
+    }
+
+    .buy,
+    .sell,
+    .gift {
+        font-size: 45px !important;
+    }
+
+    .hidden {
+        display: none;
+    }
+}
+
+@media (min-width: 1920px) and (min-height: 1080px) {
+    h1 {
+        font-size: 145px !important;
+        justify-content: center;
+        padding: "150px 10px 10px 395px";
+    }
+
+    h4 {
+        font-size: 38px !important;
+    }
+
+    h6 {
+        background: rgba(0, 0, 0, 0.4);
+        text-shadow: 1px 1px 3px black;
+        border-radius: 5px;
+        font-size: 35px !important;
+    }
+
+    .buy,
+    .sell,
+    .gift {
+        font-size: 45px !important;
+    }
+
+    .hidden {
+        display: none;
+    }
+}
+
