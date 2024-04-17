@@ -1,10 +1,10 @@
-// folder api with a folder controllers with a file items_controllers.js
-
-const items = require('express').Router();
-const db = require('../models');
+import { Router, Request, Response } from 'express';
+import db from '../models';
 const { Items } = db;
 
-items.get('/', async (req, res) => {
+const items: Router = Router();
+
+items.get('/', async (req: Request, res: Response) => {
     try {
         const foundItems = await Items.findAll();
         res.status(200).json(foundItems);
@@ -13,7 +13,7 @@ items.get('/', async (req, res) => {
     }
 });
 
-items.get('/:name', async (req, res) => {
+items.get('/:name', async (req: Request, res: Response) => {
     try {
         const foundItems = await Items.findAll({
             where: { name: req.params.name },
@@ -26,8 +26,7 @@ items.get('/:name', async (req, res) => {
 });
 
 // CREATE route
-
-items.post('/new', async (req, res) => {
+items.post('/new', async (req: Request, res: Response) => {
     try {
         const { name, zipcode, description, price, image } = req.body;
         const newItem = await Items.create({ name, zipcode, description, price, image });
@@ -41,7 +40,7 @@ items.post('/new', async (req, res) => {
 });
 
 // DELETE route
-items.delete('/:id', async (req, res) => {
+items.delete('/:id', async (req: Request, res: Response) => {
     try {
         const itemId = req.params.id;
 
@@ -63,8 +62,9 @@ items.delete('/:id', async (req, res) => {
         res.status(500).json(error);
     }
 });
+
 // UPDATE route
-items.put('/:id', async (req, res) => {
+items.put('/:id', async (req: Request, res: Response) => {
     try {
         const itemId = req.params.id;
         const { name, image, price, title, zipcode, description } = req.body;
@@ -100,5 +100,4 @@ items.put('/:id', async (req, res) => {
     }
 });
 
-
-module.exports = items;
+export default items;

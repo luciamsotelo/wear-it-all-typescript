@@ -15,7 +15,7 @@ export default function SearchInput() {
     const handleSearch = async (e) => {
         e.preventDefault();
         try {
-            const response = await fetch('http://localhost:3127/items');
+            const response = await fetch('https://wear-it-again-api.onrender.com/items');
             const jsonData = await response.json();
             setJsonData(jsonData);
             const filtered = jsonData.filter((item) => item.name.toLowerCase() === search.toLowerCase());

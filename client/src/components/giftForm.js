@@ -47,7 +47,7 @@ const GiftForm = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         try {
-            const response = await fetch('http://localhost:3127/items/new', {
+            const response = await fetch('https://wear-it-again-api.onrender.com/items/new', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

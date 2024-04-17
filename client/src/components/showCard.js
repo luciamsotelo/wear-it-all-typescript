@@ -13,7 +13,7 @@ function ShowCard({ imageData }) {
     const handleBuyClick = async () => {
         try {
             const response = await fetch(
-                `http://localhost:3127/items/${imageData.item_id}`,
+                `https://wear-it-again-api.onrender.com/items/${imageData.item_id}`,
                 {
                     method: "DELETE",
                     headers: {
